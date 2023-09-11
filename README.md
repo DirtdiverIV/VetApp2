@@ -1,2 +1,2 @@
-# VetApp2
-Vet Aplication, personal project for Factoria F5 Bootcamp
+# VetApp
+App to manage a Vet Clinic
