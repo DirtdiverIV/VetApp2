@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #8cbfbc;
+  }
+
+a {
+    color: #f4f4f2;
+}
+  
+  
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+  }
+  
+  .butdiv {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+
+  }
+
+button:hover {
+    background-color: #055f5b;
+}
+
+button {
+    color: #055f5b;
+    border-color: #055f5b;
+}
+
+#icon {
+    width: 4em;
+}
+
+#logo {
+    width: 4em;
+}
