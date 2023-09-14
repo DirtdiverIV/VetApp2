@@ -1,0 +1,64 @@
+<table class="table table-success table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Last</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Controls</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{ client.id }}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.lastName }}</td>
+            <td>{{ client.phoneNumber }}</td>
+            <td>{{ client.mail }}</td>
+            <td>{{ client.pets}}</td>
+            
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <h2>List of Clients</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>lastName</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{ client.id }}</td>
+          <td>{{ client.name }}</td>
+          <td>{{ client.lastName }}</td>
+          <td>{{ client.mail }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
