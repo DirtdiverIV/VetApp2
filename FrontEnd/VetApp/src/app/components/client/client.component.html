@@ -16,7 +16,9 @@
             <td>{{ client.lastName }}</td>
             <td>{{ client.phoneNumber }}</td>
             <td>{{ client.mail }}</td>
-            <td>{{ client.pets}}</td>
+            <td>
+                <a [routerLink]="['/clientdetail', client.id]">Ver Detalles</a>
+              </td>
             
       </tr>
     </tbody>

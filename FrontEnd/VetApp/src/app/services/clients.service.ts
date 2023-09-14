@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClientsService {
-  private baseUrl = 'http://localhost:4000/clients'; 
+  private baseUrl = 'http://localhost:4000/clients';
 
   constructor(private http: HttpClient) { }
 
@@ -16,6 +16,10 @@ export class ClientsService {
 
   getClientById(id: number): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/${id}`);
+  }
+
+  getClientDetail(id: number): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/${id}/detail`);
   }
 
   getClientPets(id: number): Observable<any[]> {

@@ -1,1 +1,51 @@
-<p>clientdetail works!</p>
+<div id="mainDiv" class="container">
+
+    <div id="clientDiv" class="container">
+      
+          <div id="nameDiv" class="container">
+            <img id="icon" src="../assets/icons/client.svg" class="image-fluid">
+            <p id="tittle">{{ client.name }}</p>
+            <p id="tittle">{{ client.lastName }}</p>
+          </div>
+
+          <div id="nameDiv" class="container">
+            <img id="icon" src="../assets/icons/client.svg" class="image-fluid">
+            <p id="tittle">{{ client.phoneNumber }}</p>
+          </div>
+          
+          <div id="nameDiv" class="container">
+            <img id="icon" src="../assets/icons/client.svg" class="image-fluid">
+            <p id="tittle">{{ client.mail }}</p>
+          </div>
+
+          
+
+    </div>
+
+    <div id="petsDiv" class="container">
+        <h1>Pets</h1>
+        <div id="petList" class="row">
+          <!-- Utiliza *ngFor para iterar sobre las mascotas del cliente -->
+          <div class="col-md-3" *ngFor="let pet of client.pets">
+            <div class="card mb-4" style="width: 100%;">
+              <div class="card-header">
+               <h2 id="cardtittle"> {{ pet.name }} </h2> <!-- Nombre de la mascota -->
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p id="cardp">Especie: {{ pet.species }}</li> <!-- Especie de la mascota -->
+                <li class="list-group-item"><p id="cardp">Raza: {{ pet.breed }}</li> <!-- Raza de la mascota -->
+                <li class="list-group-item"><p id="cardp">Edad: {{ pet.age }}</li> <!-- Edad de la mascota -->
+                <li class="list-group-item"><p id="cardp">Historias Médicas:</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="medicalDiv" class="container" >
+
+    </div>
+
+
+
+
