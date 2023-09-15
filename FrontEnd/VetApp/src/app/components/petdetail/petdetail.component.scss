@@ -1,0 +1,39 @@
+#clientDiv {
+    display: flex;
+    height: 4em;
+    flex-direction: row;
+    background-color: #8cbfbc;
+    border-radius: 4px;
+}
+
+#nameDiv {
+    display: flex;
+    align-items: center;
+}
+
+
+#icon {
+    max-height: 4em;
+    border: 2px solid red;
+}
+
+#tittle {
+    font-size: 2em;
+    border: 2px solid red;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    color: #f4f4f2;
+}
+
+#medicalDiv {
+    background-color: #f4f4f2;
+}
+
+#cardtittle {
+    color: #055f5b;
+}
+
+.card-header {
+    background-color: #8cbfbc;
+
+}

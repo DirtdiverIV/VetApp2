@@ -1,0 +1,37 @@
+<div id="mainDiv" class="container">
+
+    <div id="clientDiv" class="container">
+      
+          <div id="nameDiv" class="container">
+            <p id="tittle">Nombre: {{ pet.name }}</p>
+            <p id="tittle">Specie: {{ pet.species }}</p>
+          </div>
+
+          <div id="nameDiv" class="container">
+            <p id="tittle">{{ pet.breed }}</p>
+          </div>
+          
+          <div id="nameDiv" class="container">
+            <p id="tittle">{{ pet.age }}</p>
+          </div>
+
+          
+
+    </div>
+
+    <div id="petsDiv" class="container">
+        <h1>Pets</h1>
+        <div id="petList" class="row">
+          <div class="col-md-3" *ngFor="let medicalHistory of pet.medicalHistories">
+           
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p id="cardp">Date: {{ medicalHistory.date }}</li> <!-- Especie de la mascota -->
+                <li class="list-group-item"><p id="cardp">Description {{ medicalHistory.description }}</li> <!-- Raza de la mascota -->
+              </ul>
+          
+        </div>
+      </div>
+
+    <div id="medicalDiv" class="container" >
+
+    </div>

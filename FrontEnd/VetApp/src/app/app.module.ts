@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ClientComponent } from './components/client/client.component';
 import { ClientdetailComponent } from './components/clientdetail/clientdetail.component';
+import { PetsComponent } from './components/pets/pets.component';
+import { PetdetailComponent } from './components/petdetail/petdetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ClientComponent,
-    ClientdetailComponent
+    ClientdetailComponent,
+    PetsComponent,
+    PetdetailComponent
   ],
   imports: [
     BrowserModule,

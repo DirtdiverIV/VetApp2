@@ -1,0 +1,23 @@
+<table class="table table-success table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Specie</th>
+        <th scope="col">Breed</th>
+        <th scope="col">Age</th>
+        <th scope="col">medicalHistory</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pet of pets">
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.species }}</td>
+            <td>{{ pet.breed }}</td>
+            <td>{{ pet.age }}</td>
+            <td>
+                <a [routerLink]="['/petdetail', pet.id]">Ver Detalles</a>
+              </td>
+            
+      </tr>
+    </tbody>
+  </table>
