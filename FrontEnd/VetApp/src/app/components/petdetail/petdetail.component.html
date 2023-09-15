@@ -3,16 +3,10 @@
     <div id="clientDiv" class="container">
       
           <div id="nameDiv" class="container">
-            <p id="tittle">Nombre: {{ pet.name }}</p>
-            <p id="tittle">Specie: {{ pet.species }}</p>
-          </div>
-
-          <div id="nameDiv" class="container">
+            <p id="tittle">{{ pet.name }}</p>
+            <p id="tittle">{{ pet.species }}</p>
             <p id="tittle">{{ pet.breed }}</p>
-          </div>
-          
-          <div id="nameDiv" class="container">
-            <p id="tittle">{{ pet.age }}</p>
+          <p id="tittle">Age:{{ pet.age }} years</p>
           </div>
 
           
@@ -20,17 +14,37 @@
     </div>
 
     <div id="petsDiv" class="container">
-        <h1>Pets</h1>
+        
+      
+      <table class="table table-success table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Description</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let medicalHistory of pet.medicalHistories">
+                <td>{{ medicalHistory.date }}</td>
+                <td>{{ medicalHistory.description }}</td>
+                
+          </tr>
+        </tbody>
+      </table>
+      
+
+      <!-- <h1>Pets</h1>
         <div id="petList" class="row">
           <div class="col-md-3" *ngFor="let medicalHistory of pet.medicalHistories">
            
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><p id="cardp">Date: {{ medicalHistory.date }}</li> <!-- Especie de la mascota -->
-                <li class="list-group-item"><p id="cardp">Description {{ medicalHistory.description }}</li> <!-- Raza de la mascota -->
+                <li class="list-group-item"><p id="cardp">Date: {{ medicalHistory.date }}</li>  Especie de la mascota
+                <li class="list-group-item"><p id="cardp">Description {{ medicalHistory.description }}</li> 
               </ul>
           
         </div>
-      </div>
+      </div> -->
 
     <div id="medicalDiv" class="container" >
 
