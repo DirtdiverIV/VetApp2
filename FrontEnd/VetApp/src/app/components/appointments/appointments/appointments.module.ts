@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppointmentsComponent } from '../appointments.component';
+
 import { FullCalendarModule } from '@fullcalendar/angular'; // Importa FullCalendarModule
 
 
 
 @NgModule({
-  declarations: [AppointmentsComponent],
+  declarations: [],
   imports: [
     FullCalendarModule, // Agrega FullCalendarModule a tus imports
     // ...

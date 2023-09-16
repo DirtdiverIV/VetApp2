@@ -11,6 +11,7 @@ import { PetsComponent } from './components/pets/pets.component';
 import { PetdetailComponent } from './components/petdetail/petdetail.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { AppointmentsComponent } from './components/appointments/appointments.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     PetsComponent,
     PetdetailComponent,
     TreatmentsComponent,
+    AppointmentsComponent
   ],
   imports: [
     BrowserModule,
