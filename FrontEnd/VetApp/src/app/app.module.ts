@@ -10,6 +10,7 @@ import { ClientdetailComponent } from './components/clientdetail/clientdetail.co
 import { PetsComponent } from './components/pets/pets.component';
 import { PetdetailComponent } from './components/petdetail/petdetail.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
+import { AppointmentsComponent } from './components/appointments/appointments.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TreatmentsComponent } from './components/treatments/treatments.componen
     ClientdetailComponent,
     PetsComponent,
     PetdetailComponent,
-    TreatmentsComponent
+    TreatmentsComponent,
+    AppointmentsComponent
   ],
   imports: [
     BrowserModule,
