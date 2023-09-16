@@ -20,7 +20,6 @@ public class Appointment {
 
     @ManyToOne
     @JoinColumn(name = "pet_id", referencedColumnName = "id")
-    @JsonIgnore
     private Pets pet;
 
 

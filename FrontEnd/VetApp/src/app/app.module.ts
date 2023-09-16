@@ -10,7 +10,7 @@ import { ClientdetailComponent } from './components/clientdetail/clientdetail.co
 import { PetsComponent } from './components/pets/pets.component';
 import { PetdetailComponent } from './components/petdetail/petdetail.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
-import { AppointmentsComponent } from './components/appointments/appointments.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -21,12 +21,12 @@ import { AppointmentsComponent } from './components/appointments/appointments.co
     PetsComponent,
     PetdetailComponent,
     TreatmentsComponent,
-    AppointmentsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
