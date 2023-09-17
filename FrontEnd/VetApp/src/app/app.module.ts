@@ -12,6 +12,7 @@ import { PetdetailComponent } from './components/petdetail/petdetail.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AppointmentsComponent } from './components/appointments/appointments.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AppointmentsComponent } from './components/appointments/appointments.co
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FullCalendarModule
+    FullCalendarModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
