@@ -9,22 +9,33 @@ import dayGridPlugin from '@fullcalendar/daygrid';
   styleUrls: ['./appointments.component.scss']
 })
 export class AppointmentsComponent implements OnInit {
-  apoinments: any[] = []; 
+  appointments: any[] = [];
 
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
-    plugins: [dayGridPlugin]
+    plugins: [dayGridPlugin],
+    events: [] // Inicialmente, los eventos están vacíos
   };
 
-  constructor(private appointmentsService: AppointmentsService) { }
+  constructor(private appointmentsService: AppointmentsService) {}
 
   ngOnInit(): void {
-    this.getAppoinments();
+    this.getAppointments();
   }
 
-  getAppoinments() {
-    this.appointmentsService.getAllAppointments().subscribe(apoinments => {
-      this.apoinments = apoinments;
+  getAppointments() {
+    this.appointmentsService.getAllAppointments().subscribe(appointments => {
+      this.appointments = appointments;
+
+      // Formatea los datos de appointments para FullCalendar
+      const events = this.appointments.map(appointment => ({
+        title: appointment.description,
+        start: appointment.date,
+        // Puedes agregar más propiedades si es necesario
+      }));
+
+      // Actualiza los eventos en las opciones del calendario
+      this.calendarOptions.events = events;
     });
   }
 }
