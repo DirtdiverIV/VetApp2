@@ -1,5 +1,6 @@
-/* styles.css o styles.scss */
-.fc-event-title {
-    font-size: 16px; /* Ajusta el tamaño de fuente según tus preferencias */
-    /* Puedes agregar otros estilos personalizados aquí */
+.fc-event.event-hover {
+    background-color: #FFD700; /* Cambia el color de fondo al pasar el mouse */
+    border-color: #FFA500; /* Cambia el color del borde al pasar el mouse */
+    color: #000; /* Cambia el color del texto al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
   }

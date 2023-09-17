@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AppointmentsService } from 'src/app/services/appointments.service';
 import { CalendarOptions } from '@fullcalendar/core';
 import timeGridPlugin from '@fullcalendar/timegrid';
+import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import { Router } from '@angular/router';
+import { EventInput } from '@fullcalendar/core';
 
 @Component({
   selector: 'app-appointments',
@@ -11,11 +13,24 @@ import { Router } from '@angular/router';
 })
 export class AppointmentsComponent implements OnInit {
   appointments: any[] = [];
+  calendarEvents: EventInput[] = []; // Usa este arreglo para almacenar eventos con información adicional
+
 
   calendarOptions: CalendarOptions = {
     initialView: 'timeGridWeek',
-    plugins: [timeGridPlugin],
-    events: [], 
+    plugins: [timeGridPlugin, bootstrap5Plugin ],
+    themeSystem: 'bootstrap5',
+    events: [],
+    eventColor: '#8cbfbc',
+    eventBackgroundColor: '#d1e7dd',
+    eventBorderColor: '#bcd0c7',
+    eventTextColor: '#000000',
+    allDaySlot: false,
+    now: new Date(),
+    nowIndicator: true, 
+    slotMinTime: "09:00:00",
+    slotMaxTime: "21:00:00",
+    titleFormat: { year: 'numeric', month: 'long', day: 'numeric' },
     businessHours: {
       
       daysOfWeek: [1, 2, 3, 4, 5], 
