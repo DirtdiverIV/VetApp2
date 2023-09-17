@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppointmentsService } from 'src/app/services/appointments.service';
 import { CalendarOptions } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
 
 @Component({
   selector: 'app-appointments',
@@ -12,8 +12,8 @@ export class AppointmentsComponent implements OnInit {
   appointments: any[] = [];
 
   calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth',
-    plugins: [dayGridPlugin],
+    initialView: 'timeGridWeek',
+    plugins: [timeGridPlugin],
     events: [] // Inicialmente, los eventos están vacíos
   };
 
