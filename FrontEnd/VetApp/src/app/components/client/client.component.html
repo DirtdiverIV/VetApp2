@@ -1,3 +1,14 @@
+<nav id="nav" class="navbar navbar-custom">
+  <div id="butdiv" class="container-fluid butdiv">
+    <button id="addclient" type="button" class="btn btn-outline-success" [routerLink]="['/clientform']">
+      <img id="icon" src="../assets/icons/addclient.svg" class="img-fluid" alt="...">
+    </button>
+  </div>
+</nav>
+
+
+
+
 <table class="table table-success table-striped table-hover">
     <thead>
       <tr>
@@ -33,34 +44,3 @@
 
 
 
-
-
-
-
-
-
-
-
-<!-- <div>
-    <h2>List of Clients</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>lastName</th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let client of clients">
-          <td>{{ client.id }}</td>
-          <td>{{ client.name }}</td>
-          <td>{{ client.lastName }}</td>
-          <td>{{ client.mail }}</td>
-          
-        </tr>
-      </tbody>
-    </table>
-  </div> -->

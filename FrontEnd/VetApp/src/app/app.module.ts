@@ -13,6 +13,7 @@ import { TreatmentsComponent } from './components/treatments/treatments.componen
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AppointmentsComponent } from './components/appointments/appointments.component';
 import { RouterModule } from '@angular/router';
+import { ClientformComponent } from './components/clientform/clientform.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
     PetsComponent,
     PetdetailComponent,
     TreatmentsComponent,
-    AppointmentsComponent
+    AppointmentsComponent,
+    ClientformComponent
   ],
   imports: [
     BrowserModule,
