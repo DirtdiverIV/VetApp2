@@ -14,6 +14,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { AppointmentsComponent } from './components/appointments/appointments.component';
 import { RouterModule } from '@angular/router';
 import { ClientformComponent } from './components/clientform/clientform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ClientformComponent } from './components/clientform/clientform.componen
     AppRoutingModule,
     HttpClientModule,
     FullCalendarModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
