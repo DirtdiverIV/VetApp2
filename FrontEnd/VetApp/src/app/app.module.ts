@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { ClientformComponent } from './components/clientform/clientform.component';
 import { FormsModule } from '@angular/forms';
 import { PetformComponent } from './components/petform/petform.component';
+import { AppointmentformComponent } from './components/appoinmentform/appoinmentform.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PetformComponent } from './components/petform/petform.component';
     TreatmentsComponent,
     AppointmentsComponent,
     ClientformComponent,
-    PetformComponent
+    PetformComponent,
+    AppointmentformComponent
   ],
   imports: [
     BrowserModule,

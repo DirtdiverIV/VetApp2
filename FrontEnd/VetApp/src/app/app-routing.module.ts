@@ -8,6 +8,7 @@ import { TreatmentsComponent } from './components/treatments/treatments.componen
 import { AppointmentsComponent } from './components/appointments/appointments.component';
 import { ClientformComponent } from './components/clientform/clientform.component';
 import { PetformComponent } from './components/petform/petform.component';
+import { AppointmentformComponent } from './components/appoinmentform/appoinmentform.component';
 
 const routes: Routes = [
   { path: 'clientdetail/:id', component: ClientdetailComponent},
@@ -17,7 +18,9 @@ const routes: Routes = [
     {path: 'treatments', component: TreatmentsComponent},
     {path: 'appointments', component: AppointmentsComponent},
     { path: 'clientform', component: ClientformComponent },
-    { path: 'petform', component: PetformComponent }
+    { path: 'petform', component: PetformComponent },
+    { path: 'appform', component: AppointmentformComponent }
+
 
 
 ];
