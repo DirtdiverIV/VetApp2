@@ -98,5 +98,6 @@ public class Pets {
         this.medicalHistories = medicalHistories;
     }
 
-
+    public void setClient(Clients client) {
+    }
 }

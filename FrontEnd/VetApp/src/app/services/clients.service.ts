@@ -41,4 +41,8 @@ export class ClientsService {
   deleteClient(id: number): Observable<any> {
     return this.http.delete<any>(`${this.baseUrl}/${id}`);
   }
+
+  addPetToClient(petData: any, clientId: number): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/${clientId}/pets`, petData);
+  }
 }

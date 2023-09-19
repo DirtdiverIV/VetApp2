@@ -80,6 +80,19 @@ public class ClientsController {
         return client;
     }
 
+    @PostMapping("/{clientId}/pets")
+    @Transactional
+    public Pets createPetForClient(@PathVariable Long clientId, @RequestBody Pets pet) {
+        Clients client = clientsRepository.findById(clientId)
+                .orElseThrow(() -> new EntityNotFoundException("Client with ID " + clientId + " not found."));
+
+        pet.setOwner(client);
+
+        entityManager.persist(pet);
+
+        return pet;
+    }
+
     @PutMapping("/{id}")
     @Transactional
     public Clients updateClient(@PathVariable Long id, @RequestBody Clients updatedClient) {
