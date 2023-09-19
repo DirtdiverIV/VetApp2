@@ -16,6 +16,10 @@ export class PetdetailComponent implements OnInit {
     this.getPetDetail();
   }
 
+  goBack() {
+    window.history.back();
+  }
+
   getPetDetail() {
     const petId = this.route.snapshot.paramMap.get('id');
     if (petId) {

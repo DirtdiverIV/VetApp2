@@ -1,0 +1,40 @@
+nav {
+    background-color: #f4f4f2;
+  }
+  
+  .butdiv {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+
+  }
+
+button:hover {
+    background-color: #055f5b;
+    border-color: #055f5b;
+}
+
+button {
+    color: #055f5b;
+    background-color: #8cbfbc;
+    
+}
+
+#icon {
+    width: 2em;
+}
+
+#logo {
+    width: 2em;
+}
+
+.bdr {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+th {
+    background-color: #055f5b;
+    color: #f4f4f2;
+
+}  

@@ -1,6 +1,44 @@
+<nav id="nav" class="navbar navbar-custom">
+  <div id="butdiv" class="container-fluid butdiv">
+    <button class="btn btn-primary" (click)="goBack()">
+      <img id="icon" src="../assets/icons/back.svg" class="img-fluid" alt="...">
+    </button>
+  </div>
+</nav>
+
+
+
+
+
+
 <div id="mainDiv" class="container">
 
-    <div id="clientDiv" class="container">
+  <div id="clientDiv" class="container">
+ 
+    <div id="nameDiv" class="container">
+      <img id="iconBig" src="../assets/icons/cat.svg" class="image-fluid">
+      <p id="tittle">{{ pet.name }}</p>
+      <img id="iconBig" src="../assets/icons/arena.svg" class="image-fluid">
+      <p id="tittle">{{ pet.age }} years</p>
+      
+    </div>
+    
+    <div id="nameDiv" class="container">
+      <img id="iconBig" src="../assets/icons/bicho.svg" class="image-fluid">
+      <p id="tittle">{{ pet.species }}</p>
+      <p id="tittle">{{ pet.breed }}</p>
+    </div>
+
+    
+
+</div>
+
+
+
+
+
+
+    <!-- <div id="clientDiv" class="container">
       
           <div id="nameDiv" class="container">
             <p id="tittle">{{ pet.name }}</p>
@@ -11,10 +49,10 @@
 
           
 
-    </div>
+    </div> -->
 
     <div id="petsDiv" class="container">
-        
+      <h1 id="green">Medical History</h1>
       
       <table class="table table-success table-striped table-hover">
         <thead>

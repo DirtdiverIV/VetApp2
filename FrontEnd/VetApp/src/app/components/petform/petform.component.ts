@@ -27,7 +27,7 @@ export class PetformComponent implements OnInit {
   ngOnInit(): void {
     // Obtén el cliente seleccionado del servicio compartido
     this.selectedClient = this.selectedClientService.getSelectedClient();
-    
+
     if (this.selectedClient) {
       // Habilita el botón de envío cuando el cliente se haya cargado
       this.submitButtonDisabled = false;
@@ -37,6 +37,10 @@ export class PetformComponent implements OnInit {
     this.clientsService.getAllClients().subscribe((clients) => {
       this.clientsList = clients;
     });
+  }
+
+  goBack() {
+    window.history.back();
   }
 
   onSubmit() {
@@ -49,21 +53,23 @@ export class PetformComponent implements OnInit {
         breed: this.breed,
         age: this.age,
       };
-  
+
       // Llama al servicio para crear la mascota asociada al cliente
-      this.clientsService.addPetToClient(newPet, this.selectedClient.id).subscribe(
-        (response) => {
-          console.log('Mascota creada con éxito', response);
-          // Limpia los campos del formulario después de la creación
-          this.name = '';
-          this.species = '';
-          this.breed = '';
-          this.age = '';
-        },
-        (error) => {
-          console.error('Error al crear la mascota', error);
-        }
-      );
+      this.clientsService
+        .addPetToClient(newPet, this.selectedClient.id)
+        .subscribe(
+          (response) => {
+            console.log('Mascota creada con éxito', response);
+            // Limpia los campos del formulario después de la creación
+            this.name = '';
+            this.species = '';
+            this.breed = '';
+            this.age = '';
+          },
+          (error) => {
+            console.error('Error al crear la mascota', error);
+          }
+        );
     } else {
       console.error(
         'Error: Cliente no encontrado en el contexto de ClientdetailComponent.'

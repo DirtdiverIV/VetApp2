@@ -17,7 +17,7 @@
         <th scope="col">Last</th>
         <th scope="col">Phone</th>
         <th scope="col">Mail</th>
-        <th scope="col">Controls</th>
+        <th scope="col">File</th>
       </tr>
     </thead>
     <tbody>
@@ -28,7 +28,8 @@
             <td>{{ client.phoneNumber }}</td>
             <td>{{ client.mail }}</td>
             <td>
-                <a [routerLink]="['/clientdetail', client.id]">Ver Detalles</a>
+              <button id="addclient" type="button" class="btn btn-outline-success"  [routerLink]="['/clientdetail', client.id]"><img id="icon" src="../assets/icons/client.svg" class="img-fluid" alt="...">
+              </button>
               </td>
             
       </tr>

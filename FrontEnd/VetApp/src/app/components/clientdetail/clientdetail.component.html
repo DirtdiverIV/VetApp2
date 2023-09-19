@@ -32,7 +32,7 @@
     </div>
 
     <div id="petsDiv" class="container">
-        <h1>Pets</h1>
+        <h1 id="green">Pets</h1>
         <div id="petList" class="row">
           <div class="col-md-3" *ngFor="let pet of client.pets">
             <div class="card mb-4" style="width: 100%;">
@@ -40,13 +40,13 @@
                <h2 id="cardtittle"> {{ pet.name }} </h2> 
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><p id="cardp">Especie: {{ pet.species }}</li> 
-                <li class="list-group-item"><p id="cardp">Raza: {{ pet.breed }}</li> 
-                <li class="list-group-item"><p id="cardp">Edad: {{ pet.age }}</li> 
+                <li class="list-group-item"><p>Especie: </p><p id="cardp">{{ pet.species }}</li> 
+                <li class="list-group-item"><p>Raza: </p><p id="cardp">{{ pet.breed }}</li> 
+                <li class="list-group-item"><p>Edad: </p><p id="cardp">{{ pet.age }}</li> 
                   <li class="list-group-item">
                     <a [routerLink]="['/petdetail', pet.id]">
                       <button id="petBtn" type="button" class="btn btn-outline-success">
-                        <img id="icon" src="../assets/icons/paw.svg" class="img-fluid" alt="...">
+                        <img id="icon" src="../assets/icons/heart.svg" class="img-fluid" alt="...">
                       </button>
                     </a>
                   </li>
@@ -56,7 +56,26 @@
         </div>
       </div>
 
-    <div id="medicalDiv" class="container" >
+      <div id="medicalDiv" class="container">
+        <h1 id="white">Appointments</h1>
+        <table id="medicalTable" class="table table-success table-striped table-hover bdr">
+          <thead>
+            <tr>
+              <th>Pet</th>
+              <th>Description</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let appointment of appointments">
+              <td>{{ appointment.pet.name }}</td>
+              <td>{{ appointment.description }}</td>
+              <td>{{ appointment.date }}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
     </div>
 

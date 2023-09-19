@@ -25,6 +25,7 @@
 
 #petsDiv {
     background-color: #f4f4f2;
+    padding: 2em;
 }
 
 #cardtittle {
@@ -72,3 +73,36 @@ button {
     width: 100%;
 }
 
+#medicalDiv {
+    background-color: #8cbfbc;
+    padding: 2em;
+    border-radius: 4px;
+}
+
+#white {
+    color: #f4f4f2;
+}
+
+#green {
+    color: #055f5b;
+}
+
+.bdr {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+th {
+    background-color: #055f5b;
+    color: #f4f4f2;
+
+}  
+
+p {
+    display: inline;
+}
+
+#cardp {
+    color: #055f5b;
+    font-weight: bold;
+}

@@ -1,25 +1,36 @@
+<nav id="nav" class="navbar navbar-custom">
+  <div id="butdiv" class="container-fluid butdiv">
+    <button id="addclient" type="button" class="btn btn-outline-success" [routerLink]="['/clientform']">
+      <img id="icon" src="../assets/icons/addclient.svg" class="img-fluid" alt="...">
+    </button>
+  </div>
+</nav>
+
+
+
 <table class="table table-success table-striped table-hover">
     <thead>
       <tr>
+        <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Specie</th>
         <th scope="col">Breed</th>
         <th scope="col">Age</th>
-        <th scope="col">Client</th>
-        <th scope="col">medicalHistory</th>
+        <th scope="col">File</th>
       </tr>
     </thead>
     <tbody>
         <tr *ngFor="let pet of pets">
+            <td>{{ pet.id }}</td>  
             <td>{{ pet.name }}</td>
             <td>{{ pet.species }}</td>
             <td>{{ pet.breed }}</td>
             <td>{{ pet.age }}</td>
-            <td>{{ pet.clientId }}</td>
             <td>
-                <a [routerLink]="['/petdetail', pet.id]">Ver Detalles</a>
+              <button id="addclient" type="button" class="btn btn-outline-success"  [routerLink]="['/petdetail', pet.id]"><img id="icon" src="../assets/icons/clipboard.svg" class="img-fluid" alt="...">
+              </button>
               </td>
-            
+              
       </tr>
     </tbody>
   </table>

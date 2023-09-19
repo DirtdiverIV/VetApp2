@@ -1,7 +1,6 @@
 #clientDiv {
     display: flex;
-    height: 4em;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #8cbfbc;
     border-radius: 4px;
 }
@@ -12,21 +11,21 @@
 }
 
 
-#icon {
+#iconBig {
     max-height: 4em;
-    border: 2px solid red;
+    padding-left: 1em;
 }
 
 #tittle {
     font-size: 2em;
-    border: 2px solid red;
     margin-top: 0.5em;
     margin-left: 1em;
     color: #f4f4f2;
 }
 
-#medicalDiv {
+#petsDiv {
     background-color: #f4f4f2;
+    padding: 2em;
 }
 
 #cardtittle {
@@ -36,4 +35,74 @@
 .card-header {
     background-color: #8cbfbc;
 
+}
+
+
+nav {
+    background-color: #f4f4f2;
+  }
+  
+  .butdiv {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+
+  }
+
+button:hover {
+    background-color: #055f5b;
+    border-color: #055f5b;
+}
+
+button {
+    color: #055f5b;
+    background-color: #8cbfbc;
+    
+    
+}
+
+#icon {
+    width: 2em;
+}
+
+#logo {
+    width: 2em;
+}
+
+#petBtn {
+    width: 100%;
+}
+
+#medicalDiv {
+    background-color: #8cbfbc;
+    padding: 2em;
+    border-radius: 4px;
+}
+
+#white {
+    color: #f4f4f2;
+}
+
+#green {
+    color: #055f5b;
+}
+
+.bdr {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+th {
+    background-color: #055f5b;
+    color: #f4f4f2;
+
+}  
+
+p {
+    display: inline;
+}
+
+#cardp {
+    color: #055f5b;
+    font-weight: bold;
 }

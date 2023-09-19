@@ -35,3 +35,24 @@ button {
 #logo {
     width: 2em;
 }
+
+#btndiv {
+    display: flex;
+    justify-content: space-evenly;
+} 
+
+#submit {
+    background-color: #f0c266;
+    border-color: #f0c266;
+    color: #f4f4f2;
+}
+
+#submit:hover {
+    background-color: #febb34;
+    border-color: #febb34;
+    color: #055f5b;
+}
+
+h2 {
+    color: #055f5b;
+}

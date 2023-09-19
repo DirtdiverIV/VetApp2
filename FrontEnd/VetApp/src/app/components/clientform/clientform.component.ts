@@ -35,5 +35,12 @@ export class ClientformComponent {
     }, error => {
       console.error('Error al crear el cliente', error);
     });
+
+    
   }
+
+  goBack() {
+    window.history.back();
+  }
+
 }
