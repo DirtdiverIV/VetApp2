@@ -7,6 +7,7 @@ import { PetsComponent } from './components/pets/pets.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
 import { AppointmentsComponent } from './components/appointments/appointments.component';
 import { ClientformComponent } from './components/clientform/clientform.component';
+import { PetformComponent } from './components/petform/petform.component';
 
 const routes: Routes = [
   { path: 'clientdetail/:id', component: ClientdetailComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
     {path: 'pets', component: PetsComponent },
     {path: 'treatments', component: TreatmentsComponent},
     {path: 'appointments', component: AppointmentsComponent},
-    { path: 'clientform', component: ClientformComponent }
+    { path: 'clientform', component: ClientformComponent },
+    { path: 'petform', component: PetformComponent }
+
 
 ];
 

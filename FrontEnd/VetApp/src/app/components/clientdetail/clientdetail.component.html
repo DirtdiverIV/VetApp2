@@ -1,21 +1,30 @@
+<nav id="nav" class="navbar navbar-custom">
+  <div id="butdiv" class="container-fluid butdiv">
+    <button id="addclient" type="button" class="btn btn-outline-success" [routerLink]="['/petform']">
+      <img id="icon" src="../assets/icons/cat.svg" class="img-fluid" alt="...">
+    </button>
+  </div>
+</nav>
+
+
+
 <div id="mainDiv" class="container">
 
     <div id="clientDiv" class="container">
       
           <div id="nameDiv" class="container">
-            <img id="icon" src="../assets/icons/client.svg" class="image-fluid">
+            <img id="iconBig" src="../assets/icons/client.svg" class="image-fluid">
             <p id="tittle">{{ client.name }}</p>
             <p id="tittle">{{ client.lastName }}</p>
-          </div>
-
-          <div id="nameDiv" class="container">
-            <img id="icon" src="../assets/icons/client.svg" class="image-fluid">
+            <img id="iconBig" src="../assets/icons/phone2.svg" class="image-fluid">
             <p id="tittle">{{ client.phoneNumber }}</p>
           </div>
           
           <div id="nameDiv" class="container">
-            <img id="icon" src="../assets/icons/client.svg" class="image-fluid">
+            <img id="iconBig" src="../assets/icons/mail.svg" class="image-fluid">
             <p id="tittle">{{ client.mail }}</p>
+            <img id="iconBig" src="../assets/icons/house.svg" class="image-fluid">
+            <p id="tittle">{{ client.address }}</p>
           </div>
 
           
@@ -25,17 +34,22 @@
     <div id="petsDiv" class="container">
         <h1>Pets</h1>
         <div id="petList" class="row">
-          <!-- Utiliza *ngFor para iterar sobre las mascotas del cliente -->
           <div class="col-md-3" *ngFor="let pet of client.pets">
             <div class="card mb-4" style="width: 100%;">
               <div class="card-header">
-               <h2 id="cardtittle"> {{ pet.name }} </h2> <!-- Nombre de la mascota -->
+               <h2 id="cardtittle"> {{ pet.name }} </h2> 
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><p id="cardp">Especie: {{ pet.species }}</li> <!-- Especie de la mascota -->
-                <li class="list-group-item"><p id="cardp">Raza: {{ pet.breed }}</li> <!-- Raza de la mascota -->
-                <li class="list-group-item"><p id="cardp">Edad: {{ pet.age }}</li> <!-- Edad de la mascota -->
-                <li class="list-group-item"><p id="cardp">Historias Médicas:</li>
+                <li class="list-group-item"><p id="cardp">Especie: {{ pet.species }}</li> 
+                <li class="list-group-item"><p id="cardp">Raza: {{ pet.breed }}</li> 
+                <li class="list-group-item"><p id="cardp">Edad: {{ pet.age }}</li> 
+                  <li class="list-group-item">
+                    <a [routerLink]="['/petdetail', pet.id]">
+                      <button id="petBtn" type="button" class="btn btn-outline-success">
+                        <img id="icon" src="../assets/icons/paw.svg" class="img-fluid" alt="...">
+                      </button>
+                    </a>
+                  </li>
               </ul>
             </div>
           </div>

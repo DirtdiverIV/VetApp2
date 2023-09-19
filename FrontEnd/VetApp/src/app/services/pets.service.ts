@@ -34,4 +34,9 @@ export class PetsService {
   getMedicalHistoriesByPetId(id: number): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/${id}/medicalHistories`);
   }
+
+  createPetForClient(pet: any, clientId: number): Observable<any> {
+    const petWithClient = { ...pet, clientId }; // Agrega el clientId a los datos de la mascota
+    return this.http.post<any>(`${this.baseUrl}`, petWithClient);
+  }
 }

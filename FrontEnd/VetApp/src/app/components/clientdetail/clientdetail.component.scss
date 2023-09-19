@@ -1,7 +1,6 @@
 #clientDiv {
     display: flex;
-    height: 4em;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #8cbfbc;
     border-radius: 4px;
 }
@@ -12,14 +11,13 @@
 }
 
 
-#icon {
+#iconBig {
     max-height: 4em;
-    border: 2px solid red;
+    padding-left: 1em;
 }
 
 #tittle {
     font-size: 2em;
-    border: 2px solid red;
     margin-top: 0.5em;
     margin-left: 1em;
     color: #f4f4f2;
@@ -39,4 +37,38 @@
 }
 
 
+nav {
+    background-color: #f4f4f2;
+  }
+  
+  .butdiv {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+
+  }
+
+button:hover {
+    background-color: #055f5b;
+    border-color: #055f5b;
+}
+
+button {
+    color: #055f5b;
+    background-color: #8cbfbc;
+    
+    
+}
+
+#icon {
+    width: 2em;
+}
+
+#logo {
+    width: 2em;
+}
+
+#petBtn {
+    width: 100%;
+}
 
