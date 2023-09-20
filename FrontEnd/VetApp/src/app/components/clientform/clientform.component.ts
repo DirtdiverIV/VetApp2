@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ClientsService } from 'src/app/services/clients.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ClientsService } from 'src/app/services/clients.service';
   styleUrls: ['./clientform.component.scss']
 })
 export class ClientformComponent {
-  constructor(private clientsService: ClientsService) { }
+  constructor(private clientsService: ClientsService, private router: Router) { }
 
   name: string = '';
   lastName: string = '';
@@ -32,6 +33,7 @@ export class ClientformComponent {
       this.phoneNumber = '';
       this.mail = '';
       this.address = '';
+      this.router.navigate(['/clients']);
     }, error => {
       console.error('Error al crear el cliente', error);
     });

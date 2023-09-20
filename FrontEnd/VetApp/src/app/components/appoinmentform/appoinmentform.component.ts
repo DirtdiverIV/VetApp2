@@ -21,36 +21,34 @@ export class AppointmentformComponent {
     petId: null
   };
 
-  pets: any[] = []; 
-  submitButtonDisabled = false; 
+  pets: any[] = [];
+  submitButtonDisabled = false;
 
   ngOnInit() {
-   
     this.petsService.getAllPets().subscribe((pets: any[]) => {
       this.pets = pets;
     });
   }
 
   onSubmit() {
-  
     if (this.isFormValid()) {
-    
       this.petsService.assignAppointmentToPet(this.appointment.petId, this.appointment).subscribe(
         (response) => {
           console.log('Appointment assigned to pet successfully', response);
+          this.appointmentAdded.emit();
+
           
-          this.appointmentAdded.emit(); 
+          this.goBack();
         },
         (error) => {
           console.error('Error assigning appointment to pet', error);
-          // Manejo de errores aquí
+          
         }
       );
     }
   }
 
   isFormValid(): boolean {
-
     return (
       this.appointment.date &&
       this.appointment.description &&
@@ -58,7 +56,8 @@ export class AppointmentformComponent {
     );
   }
 
+
   goBack() {
-   
+    window.history.back();
   }
 }

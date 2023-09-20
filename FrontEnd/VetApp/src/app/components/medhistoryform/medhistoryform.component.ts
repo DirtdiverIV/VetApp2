@@ -45,10 +45,13 @@ export class MedhistoryformComponent {
         (response) => {
           console.log('Medical history created successfully', response);
           this.medHistoryAdded.emit();
+          
+        
+          this.goBack();
         },
         (error) => {
           console.error('Error creating medical history', error);
-          // Manejo de errores aquí
+  
         }
       );
     }
