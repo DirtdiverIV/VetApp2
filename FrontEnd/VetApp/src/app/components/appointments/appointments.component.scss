@@ -27,13 +27,3 @@ button {
 #logo {
     width: 2em;
 }
-
-[data-bs-custom-tooltip="true"] .tooltip-inner {
-    background-color: #f0f0f0; /* Cambia el color de fondo */
-    color: #333; /* Cambia el color del texto */
-    border: 1px solid #ccc; /* Agrega un borde */
-  }
-  
-  [data-bs-custom-tooltip="true"] .tooltip-arrow {
-    border-top-color: #f0f0f0; /* Cambia el color de la flecha */
-  }
