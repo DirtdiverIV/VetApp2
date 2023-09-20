@@ -51,4 +51,8 @@ export class ClientdetailComponent implements OnInit {
     this.selectedClientService.setSelectedClient(this.client); // Establece el cliente seleccionado en el servicio compartido
     this.router.navigate(['/petform']);
   }
+
+  goBack() {
+    window.history.back();
+  }
 }

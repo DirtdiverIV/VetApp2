@@ -1,20 +1,30 @@
 <nav id="nav" class="navbar navbar-custom">
-    <div id="butdiv" class="container-fluid butdiv">
-      <h2>Add New Medical History</h2>
-    </div>
-  </nav>
-  
-  <div id="formdiv" class="container-fluid">
-    <form>
-      <div id="inputdiv" class="container-fluid">
-        <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <textarea class="form-control" id="description" name="description" required></textarea>
-        </div>
-      </div>
-      <div id="btndiv" class="container-fluid">
-        <!-- <button type="button" class="btn btn-warning" (click)="goBack()">Go Back</button>
-        <button id="submit" type="submit" class="btn btn-success" [disabled]="submitButtonDisabled">Submit</button> -->
-      </div>
-    </form>
+  <div id="butdiv" class="container-fluid butdiv">
+    <h2>Add Medical History</h2>
   </div>
+</nav>
+
+<div id="formdiv" class="container-fluid">
+  <form (submit)="onSubmit()">
+    <div id="inputdiv" class="container-fluid">
+      <div class="mb-3">
+        <label for="date" class="form-label">Date and Time</label>
+        <input type="datetime-local" class="form-control" id="date" name="date" [(ngModel)]="medHistory.date" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" [(ngModel)]="medHistory.description" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="petId" class="form-label">Pet</label>
+        <select class="form-select" id="petId" name="petId" [(ngModel)]="medHistory.petId" required>
+          <option *ngFor="let pet of pets" [value]="pet.id">{{ pet.name }}</option>
+        </select>
+      </div>
+    </div>
+    <div id="btndiv" class="container-fluid">
+      <button type="button" class="btn btn-warning" (click)="goBack()">Go Back</button>
+      <button id="submit" type="submit" class="btn btn-success" [disabled]="submitButtonDisabled">Submit</button>
+    </div>
+  </form>
+</div>
