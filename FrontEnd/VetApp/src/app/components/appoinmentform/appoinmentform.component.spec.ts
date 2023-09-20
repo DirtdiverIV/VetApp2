@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppoinmentformComponent } from './appoinmentform.component';
+import { AppointmentformComponent } from './appoinmentform.component';
 
-describe('AppoinmentformComponent', () => {
-  let component: AppoinmentformComponent;
-  let fixture: ComponentFixture<AppoinmentformComponent>;
+describe('AppointmentformComponent', () => {
+  let component: AppointmentformComponent;
+  let fixture: ComponentFixture<AppointmentformComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AppoinmentformComponent]
+      declarations: [AppointmentformComponent]
     });
-    fixture = TestBed.createComponent(AppoinmentformComponent);
+    fixture = TestBed.createComponent(AppointmentformComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

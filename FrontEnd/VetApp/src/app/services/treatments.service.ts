@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TreatmentsService {
-  private baseUrl = 'http://localhost:4000/treatments'; // Ajusta la URL base según la ubicación de tu API de tratamientos
+  private baseUrl = 'http://localhost:4000/treatments';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllTreatments(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}`);

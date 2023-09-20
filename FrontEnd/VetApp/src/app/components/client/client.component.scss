@@ -1,15 +1,14 @@
 nav {
-    background-color: #f4f4f2;
-    display: flex;
-    justify-content: space-around;
-  }
+  background-color: #f4f4f2;
+  display: flex;
+  justify-content: space-around;
+}
 
 #butdiv {
-    display: flex;
-    justify-content: flex-end;
-    flex: 2;
-
-  }
+  display: flex;
+  justify-content: flex-end;
+  flex: 2;
+}
 
 #inputnavdiv {
   height: 40px;
@@ -20,46 +19,39 @@ nav {
   height: 40px;
 }
 
-
-
 #searchDiv {
   display: flex;
   align-items: center;
   width: 50%;
-
 }
 
-
-
 button:hover {
-    background-color: #055f5b;
-    border-color: #055f5b;
+  background-color: #055f5b;
+  border-color: #055f5b;
 }
 
 button {
-    color: #055f5b;
-    background-color: #8cbfbc;
-    
+  color: #055f5b;
+  background-color: #8cbfbc;
 }
 
 #icon {
-    width: 2em;
+  width: 2em;
 }
 
 #logo {
-    width: 2em;
+  width: 2em;
 }
 
 .bdr {
-    border-radius: 6px;
-    overflow: hidden;
-  }
+  border-radius: 6px;
+  overflow: hidden;
+}
 
 th {
-    background-color: #055f5b;
-    color: #f4f4f2;
-
-}  
+  background-color: #055f5b;
+  color: #f4f4f2;
+}
 
 #searchbtn {
   color: #f4f4f2;

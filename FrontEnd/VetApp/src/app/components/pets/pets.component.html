@@ -2,14 +2,35 @@
   <div id="searchDiv" class="container-fluid">
     <form id="form" (submit)="searchPets()">
       <div id="inputnavdiv" class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search by word" [(ngModel)]="searchTerm" name="searchTerm">
-        <button id="searchbtn" class="btn btn-outline-secondary" type="submit">Search</button>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by word"
+          [(ngModel)]="searchTerm"
+          name="searchTerm"
+        />
+        <button id="searchbtn" class="btn btn-outline-secondary" type="submit">
+          Search
+        </button>
       </div>
     </form>
   </div>
   <div id="butdiv" class="container-fluid butdiv">
-    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add New Client" id="addclient" type="button" class="btn btn-outline-success" [routerLink]="['/clientform']">
-      <img id="icon" src="../assets/icons/addclient.svg" class="img-fluid" alt="...">
+    <button
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Add New Client"
+      id="addclient"
+      type="button"
+      class="btn btn-outline-success"
+      [routerLink]="['/clientform']"
+    >
+      <img
+        id="icon"
+        src="../assets/icons/addclient.svg"
+        class="img-fluid"
+        alt="..."
+      />
     </button>
   </div>
 </nav>
@@ -26,14 +47,45 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let pet of filteredPets"> 
-      <td>{{ pet.id }}</td>  
+    <tr *ngFor="let pet of filteredPets">
+      <td>
+        <button
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="Delete Pet"
+          id="delBtn"
+          type="button"
+          class="btn btn-outline-danger"
+          (click)="deletePet(pet.id)"
+        >
+          <img
+            id="icon"
+            src="../assets/icons/delete.svg"
+            class="img-fluid"
+            alt="Delete"
+          />
+        </button>
+      </td>
       <td>{{ pet.name }}</td>
       <td>{{ pet.species }}</td>
       <td>{{ pet.breed }}</td>
       <td>{{ pet.age }}</td>
       <td>
-        <button data-bs-toggle="tooltip" data-bs-placement="top" title="View Pet Details" id="addpet" type="button" class="btn btn-outline-success"  [routerLink]="['/petdetail', pet.id]"><img id="icon" src="../assets/icons/clipboard.svg" class="img-fluid" alt="...">
+        <button
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="View Pet Details"
+          id="addpet"
+          type="button"
+          class="btn btn-outline-success"
+          [routerLink]="['/petdetail', pet.id]"
+        >
+          <img
+            id="icon"
+            src="../assets/icons/clipboard.svg"
+            class="img-fluid"
+            alt="..."
+          />
         </button>
       </td>
     </tr>

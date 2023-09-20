@@ -1,32 +1,68 @@
 <nav id="nav" class="navbar navbar-custom">
-    <div id="butdiv" class="container-fluid butdiv">
-      <h2>Add New Pet</h2>
-    </div>
-  </nav>
-
+  <div id="butdiv" class="container-fluid butdiv">
+    <h2>Add New Pet</h2>
+  </div>
+</nav>
 
 <div id="formdiv" class="container-fluid">
-
-    <div id="inputdiv" class="container-fluid">
+  <div id="inputdiv" class="container-fluid">
     <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Name</span>
-        <input [(ngModel)]="name" type="text" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Specie</span>
-        <input [(ngModel)]="species" type="text" class="form-control" placeholder="Specie" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Breed</span>
-        <input [(ngModel)]="breed" type="text" class="form-control" placeholder="Breed" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Age</span>
-        <input [(ngModel)]="age" type="text" class="form-control" placeholder="Years" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
+      <span class="input-group-text" id="basic-addon1">Name</span>
+      <input
+        [(ngModel)]="name"
+        type="text"
+        class="form-control"
+        placeholder="Name"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
     </div>
-    <div id="btndiv" class="container-fluid">
-        <button type="button" class="btn btn-warning" (click)="goBack()">Go Back</button>
-        <button id="submit" type="button" class="btn btn-success" (click)="onSubmit()" [disabled]="submitButtonDisabled">Submit</button>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Specie</span>
+      <input
+        [(ngModel)]="species"
+        type="text"
+        class="form-control"
+        placeholder="Specie"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
     </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Breed</span>
+      <input
+        [(ngModel)]="breed"
+        type="text"
+        class="form-control"
+        placeholder="Breed"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Age</span>
+      <input
+        [(ngModel)]="age"
+        type="text"
+        class="form-control"
+        placeholder="Years"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+  </div>
+  <div id="btndiv" class="container-fluid">
+    <button type="button" class="btn btn-warning" (click)="goBack()">
+      Go Back
+    </button>
+    <button
+      id="submit"
+      type="button"
+      class="btn btn-success"
+      (click)="onSubmit()"
+      [disabled]="submitButtonDisabled"
+    >
+      Submit
+    </button>
+  </div>
 </div>

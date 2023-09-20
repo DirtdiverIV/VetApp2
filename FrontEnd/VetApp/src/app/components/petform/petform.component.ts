@@ -36,7 +36,6 @@ export class PetformComponent implements OnInit {
     });
   }
 
-
   goBack() {
     window.history.back();
   }
@@ -50,23 +49,26 @@ export class PetformComponent implements OnInit {
         age: this.age,
       };
 
-      this.clientsService.addPetToClient(newPet, this.selectedClient.id).subscribe(
-        (response) => {
-          console.log('Mascota creada con éxito', response);
-          this.name = '';
-          this.species = '';
-          this.breed = '';
-          this.age = '';
-          
-         
-          this.goBack();
-        },
-        (error) => {
-          console.error('Error al crear la mascota', error);
-        }
-      );
+      this.clientsService
+        .addPetToClient(newPet, this.selectedClient.id)
+        .subscribe(
+          (response) => {
+            console.log('Mascota creada con éxito', response);
+            this.name = '';
+            this.species = '';
+            this.breed = '';
+            this.age = '';
+
+            this.goBack();
+          },
+          (error) => {
+            console.error('Error al crear la mascota', error);
+          }
+        );
     } else {
-      console.error('Error: Cliente no encontrado en el contexto de ClientdetailComponent.');
+      console.error(
+        'Error: Cliente no encontrado en el contexto de ClientdetailComponent.'
+      );
     }
   }
 }

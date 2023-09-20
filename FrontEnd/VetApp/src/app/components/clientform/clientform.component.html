@@ -1,36 +1,78 @@
 <nav id="nav" class="navbar navbar-custom">
-    <div id="butdiv" class="container-fluid butdiv">
-      <h2>Add New Client</h2>
-    </div>
-  </nav>
-
+  <div id="butdiv" class="container-fluid butdiv">
+    <h2>Add New Client</h2>
+  </div>
+</nav>
 
 <div id="formdiv" class="container-fluid">
-
-    <div id="inputdiv" class="container-fluid">
+  <div id="inputdiv" class="container-fluid">
     <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Name</span>
-        <input [(ngModel)]="name" type="text" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Last Name</span>
-        <input [(ngModel)]="lastName" type="text" class="form-control" placeholder="Lastname" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Phone Number</span>
-        <input [(ngModel)]="phoneNumber" type="text" class="form-control" placeholder="666666666" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Mail</span>
-        <input [(ngModel)]="mail" type="text" class="form-control" placeholder="name@example.com" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Address</span>
-        <input [(ngModel)]="address" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
+      <span class="input-group-text" id="basic-addon1">Name</span>
+      <input
+        [(ngModel)]="name"
+        type="text"
+        class="form-control"
+        placeholder="Name"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
     </div>
-    <div id="btndiv" class="container-fluid">
-        <button type="button" class="btn btn-warning" (click)="goBack()">Go Back</button>
-        <button id="submit" type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Last Name</span>
+      <input
+        [(ngModel)]="lastName"
+        type="text"
+        class="form-control"
+        placeholder="Lastname"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
     </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Phone Number</span>
+      <input
+        [(ngModel)]="phoneNumber"
+        type="text"
+        class="form-control"
+        placeholder="666666666"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Mail</span>
+      <input
+        [(ngModel)]="mail"
+        type="text"
+        class="form-control"
+        placeholder="name@example.com"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Address</span>
+      <input
+        [(ngModel)]="address"
+        type="text"
+        class="form-control"
+        placeholder="Username"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+  </div>
+  <div id="btndiv" class="container-fluid">
+    <button type="button" class="btn btn-warning" (click)="goBack()">
+      Go Back
+    </button>
+    <button
+      id="submit"
+      type="button"
+      class="btn btn-success"
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+  </div>
 </div>

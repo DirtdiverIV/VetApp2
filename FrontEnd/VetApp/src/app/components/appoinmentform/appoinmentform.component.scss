@@ -1,58 +1,56 @@
 #formdiv {
-    background-color: #d1e7dd;
-    width: 40%;
-    padding: 4em;
-    margin-top: 2em;
-    border-radius: 10px;
+  background-color: #d1e7dd;
+  width: 40%;
+  padding: 4em;
+  margin-top: 2em;
+  border-radius: 10px;
 }
 
 nav {
-    background-color: #f4f4f2;
-  }
-  
-  .butdiv {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
+  background-color: #f4f4f2;
+}
 
-  }
+.butdiv {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
 
 button:hover {
-    background-color: #055f5b;
-    border-color: #055f5b;
+  background-color: #055f5b;
+  border-color: #055f5b;
 }
 
 button {
-    color: #055f5b;
-    background-color: #8cbfbc;
-    
+  color: #055f5b;
+  background-color: #8cbfbc;
 }
 
 #icon {
-    width: 2em;
+  width: 2em;
 }
 
 #logo {
-    width: 2em;
+  width: 2em;
 }
 
 h2 {
-    color: #055f5b;
+  color: #055f5b;
 }
 
 #btndiv {
-    display: flex;
-    justify-content: space-evenly;
-} 
+  display: flex;
+  justify-content: space-evenly;
+}
 
 #submit {
-    background-color: #f0c266;
-    border-color: #f0c266;
-    color: #f4f4f2;
+  background-color: #f0c266;
+  border-color: #f0c266;
+  color: #f4f4f2;
 }
 
 #submit:hover {
-    background-color: #febb34;
-    border-color: #febb34;
-    color: #055f5b;
+  background-color: #febb34;
+  border-color: #febb34;
+  color: #055f5b;
 }

@@ -1,6 +1,20 @@
 <nav id="nav" class="navbar navbar-custom">
-      <div id="butdiv" class="container-fluid butdiv">
-        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add New Appointment" type="button" class="btn btn-outline-success"><a [routerLink]="['/appform']"><img id="icon" src="../assets/icons/calendar.svg" class="img-fluid" alt="..."></a></button>
-      </div>
-  </nav>
+  <div id="butdiv" class="container-fluid butdiv">
+    <button
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Add New Appointment"
+      type="button"
+      class="btn btn-outline-success"
+    >
+      <a [routerLink]="['/appform']"
+        ><img
+          id="icon"
+          src="../assets/icons/calendar.svg"
+          class="img-fluid"
+          alt="..."
+      /></a>
+    </button>
+  </div>
+</nav>
 <full-calendar [options]="calendarOptions"></full-calendar>

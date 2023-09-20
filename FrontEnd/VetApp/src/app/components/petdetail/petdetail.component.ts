@@ -5,12 +5,15 @@ import { PetsService } from 'src/app/services/pets.service';
 @Component({
   selector: 'app-petdetail',
   templateUrl: './petdetail.component.html',
-  styleUrls: ['./petdetail.component.scss']
+  styleUrls: ['./petdetail.component.scss'],
 })
 export class PetdetailComponent implements OnInit {
   pet: any = {};
 
-  constructor(private route: ActivatedRoute, private petsService: PetsService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private petsService: PetsService
+  ) {}
 
   ngOnInit(): void {
     this.getPetDetail();

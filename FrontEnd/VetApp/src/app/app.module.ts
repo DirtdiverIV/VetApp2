@@ -32,7 +32,7 @@ import { MedhistoryformComponent } from './components/medhistoryform/medhistoryf
     ClientformComponent,
     PetformComponent,
     AppointmentformComponent,
-    MedhistoryformComponent
+    MedhistoryformComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +40,9 @@ import { MedhistoryformComponent } from './components/medhistoryform/medhistoryf
     HttpClientModule,
     FullCalendarModule,
     RouterModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

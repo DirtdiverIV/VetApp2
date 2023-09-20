@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AppointmentsService {
-  private baseUrl = 'http://localhost:4000/appointments'; // Reemplaza con la URL correcta de tu API
+  private baseUrl = 'http://localhost:4000/appointments'; 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllAppointments(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}`);

@@ -1,42 +1,39 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: #8cbfbc;
-  }
+  display: flex;
+  justify-content: space-between;
+  background-color: #8cbfbc;
+}
 
 a {
-    color: #f4f4f2;
+  color: #f4f4f2;
 }
-  
-  
-  .logo {
-    display: flex;
-    justify-content: flex-start;
-    flex: 1;
-  }
-  
-  .butdiv {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
 
-  }
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.butdiv {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
 
 button:hover {
-    background-color: #055f5b;
-    border-color: #055f5b;
+  background-color: #055f5b;
+  border-color: #055f5b;
 }
 
 button {
-    color: #055f5b;
-    background-color: #8cbfbc;
-    
+  color: #055f5b;
+  background-color: #8cbfbc;
 }
 
 #icon {
-    width: 4em;
+  width: 4em;
 }
 
 #logo {
-    width: 4em;
+  width: 4em;
 }

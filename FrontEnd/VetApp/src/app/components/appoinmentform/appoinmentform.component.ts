@@ -5,7 +5,7 @@ import { PetsService } from 'src/app/services/pets.service';
 @Component({
   selector: 'app-appointmentform',
   templateUrl: './appoinmentform.component.html',
-  styleUrls: ['./appoinmentform.component.scss']
+  styleUrls: ['./appoinmentform.component.scss'],
 })
 export class AppointmentformComponent {
   constructor(
@@ -18,7 +18,7 @@ export class AppointmentformComponent {
   appointment: any = {
     date: '',
     description: '',
-    petId: null
+    petId: null,
   };
 
   pets: any[] = [];
@@ -32,19 +32,19 @@ export class AppointmentformComponent {
 
   onSubmit() {
     if (this.isFormValid()) {
-      this.petsService.assignAppointmentToPet(this.appointment.petId, this.appointment).subscribe(
-        (response) => {
-          console.log('Appointment assigned to pet successfully', response);
-          this.appointmentAdded.emit();
+      this.petsService
+        .assignAppointmentToPet(this.appointment.petId, this.appointment)
+        .subscribe(
+          (response) => {
+            console.log('Appointment assigned to pet successfully', response);
+            this.appointmentAdded.emit();
 
-          
-          this.goBack();
-        },
-        (error) => {
-          console.error('Error assigning appointment to pet', error);
-          
-        }
-      );
+            this.goBack();
+          },
+          (error) => {
+            console.error('Error assigning appointment to pet', error);
+          }
+        );
     }
   }
 
@@ -55,7 +55,6 @@ export class AppointmentformComponent {
       this.appointment.petId !== null
     );
   }
-
 
   goBack() {
     window.history.back();
