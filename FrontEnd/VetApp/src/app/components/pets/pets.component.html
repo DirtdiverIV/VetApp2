@@ -1,6 +1,6 @@
 <nav id="nav" class="navbar navbar-custom">
   <div id="butdiv" class="container-fluid butdiv">
-    <button id="addclient" type="button" class="btn btn-outline-success" [routerLink]="['/clientform']">
+    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add New Client" id="addclient" type="button" class="btn btn-outline-success" [routerLink]="['/clientform']">
       <img id="icon" src="../assets/icons/addclient.svg" class="img-fluid" alt="...">
     </button>
   </div>
@@ -27,7 +27,7 @@
             <td>{{ pet.breed }}</td>
             <td>{{ pet.age }}</td>
             <td>
-              <button id="addclient" type="button" class="btn btn-outline-success"  [routerLink]="['/petdetail', pet.id]"><img id="icon" src="../assets/icons/clipboard.svg" class="img-fluid" alt="...">
+              <button data-bs-toggle="tooltip" data-bs-placement="top" title="View Pet Details" id="addclient" type="button" class="btn btn-outline-success"  [routerLink]="['/petdetail', pet.id]"><img id="icon" src="../assets/icons/clipboard.svg" class="img-fluid" alt="...">
               </button>
               </td>
               

@@ -1,10 +1,10 @@
 <nav id="nav" class="navbar navbar-custom">
   <div id="butdiv" class="container-fluid butdiv">
-    <button class="btn btn-primary" (click)="goBack()">
+    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Go Back" class="btn btn-primary" (click)="goBack()">
       <img id="icon" src="../assets/icons/back.svg" class="img-fluid" alt="...">
     </button>
     <div id="butdiv" class="container-fluid butdiv">
-      <button type="button" class="btn btn-outline-success"><a [routerLink]="['/medhistory']"><img id="icon" src="../assets/icons/gotero.svg" class="img-fluid" alt="..."></a></button>
+      <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add New Medical History" type="button" class="btn btn-outline-success"><a [routerLink]="['/medhistory']"><img id="icon" src="../assets/icons/gotero.svg" class="img-fluid" alt="..."></a></button>
     </div>
   </div>
 </nav>

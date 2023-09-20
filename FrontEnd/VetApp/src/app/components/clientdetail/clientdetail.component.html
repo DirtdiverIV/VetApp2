@@ -1,10 +1,10 @@
 <nav id="nav" class="navbar navbar-custom">
   <div id="butdiv" class="container-fluid butdiv">
-    <button class="btn btn-primary" (click)="goBack()">
+    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Go Back" class="btn btn-primary" (click)="goBack()">
       <img id="icon" src="../assets/icons/back.svg" class="img-fluid" alt="...">
     </button>
   <div id="butdiv" class="container-fluid butdiv">
-    <button class="btn btn-primary" (click)="navigateToPetForm()">
+    <button data-bs-toggle="tooltip" data-bs-placement="top" title="New Pet" class="btn btn-primary" (click)="navigateToPetForm()">
       <img id="icon" src="../assets/icons/cat.svg" class="img-fluid" alt="...">
     </button>
   </div>
@@ -50,7 +50,7 @@
                 <li class="list-group-item"><p>Edad: </p><p id="cardp">{{ pet.age }}</li> 
                   <li class="list-group-item">
                     <a [routerLink]="['/petdetail', pet.id]">
-                      <button id="petBtn" type="button" class="btn btn-outline-success">
+                      <button data-bs-toggle="tooltip" data-bs-placement="top" title="Medical History" id="petBtn" type="button" class="btn btn-outline-success">
                         <img id="icon" src="../assets/icons/heart.svg" class="img-fluid" alt="...">
                       </button>
                     </a>
