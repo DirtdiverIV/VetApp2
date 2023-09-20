@@ -8,13 +8,10 @@ import { PetsService } from 'src/app/services/pets.service';
   styleUrls: ['./appoinmentform.component.scss']
 })
 export class AppointmentformComponent {
-  
-
-
   constructor(
     private appointmentsService: AppointmentsService,
     private petsService: PetsService
-  ) { }
+  ) {}
 
   @Output() appointmentAdded = new EventEmitter<void>();
 
@@ -38,18 +35,18 @@ export class AppointmentformComponent {
   onSubmit() {
     // Antes de enviar la cita, verifica si el formulario es válido
     if (this.isFormValid()) {
-      // Lógica para enviar la cita al servidor usando appointmentsService.createAppointment(this.appointment)
-      this.appointmentsService.createAppointment(this.appointment).subscribe(
+      // Lógica para asignar la cita a una mascota usando appointmentsService.assignAppointmentToPet
+      this.petsService.assignAppointmentToPet(this.appointment.petId, this.appointment).subscribe(
         (response) => {
-          console.log('Appointment created successfully', response);
-          // Aquí puedes realizar alguna acción adicional después de crear la cita
+          console.log('Appointment assigned to pet successfully', response);
+          // Aquí puedes realizar alguna acción adicional después de asignar la cita
+          this.appointmentAdded.emit(); // Emite el evento para notificar que se ha agregado una cita
         },
         (error) => {
-          console.error('Error creating appointment', error);
+          console.error('Error assigning appointment to pet', error);
           // Manejo de errores aquí
         }
       );
-      this.appointmentAdded.emit();
     }
   }
 
@@ -62,12 +59,6 @@ export class AppointmentformComponent {
       this.appointment.description &&
       this.appointment.petId !== null
     );
-  }
-
-  onAppointmentAdded() {
-    // ...
-    // Luego, emite el evento para notificar a otros componentes que se ha agregado una cita
-    this.appointmentAdded.emit();
   }
 
   goBack() {

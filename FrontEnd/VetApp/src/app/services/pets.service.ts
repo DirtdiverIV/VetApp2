@@ -39,4 +39,9 @@ export class PetsService {
     const petWithClient = { ...pet, clientId }; // Agrega el clientId a los datos de la mascota
     return this.http.post<any>(`${this.baseUrl}`, petWithClient);
   }
+
+  assignAppointmentToPet(petId: number, appointment: any): Observable<any> {
+    const url = `${this.baseUrl}/${petId}/appointments`;
+    return this.http.post<any>(url, appointment);
+  }
 }
