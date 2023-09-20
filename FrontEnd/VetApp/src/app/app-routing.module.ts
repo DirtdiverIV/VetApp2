@@ -21,7 +21,8 @@ const routes: Routes = [
     { path: 'clientform', component: ClientformComponent },
     { path: 'petform', component: PetformComponent },
     { path: 'appform', component: AppointmentformComponent },
-    { path: 'medhistory', component: MedhistoryformComponent }
+    { path: 'medhistory', component: MedhistoryformComponent },
+    { path: '', component: AppointmentsComponent }
 
 
 

@@ -1,4 +1,12 @@
 <nav id="nav" class="navbar navbar-custom">
+  <div id="searchDiv" class="container-fluid">
+    <form id="form" (submit)="searchClients()">
+      <div id="inputnavdiv" class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="searchTerm" name="searchTerm">
+        <button id="searchbtn" class="btn btn-outline-secondary" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
   <div id="butdiv" class="container-fluid butdiv">
     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add New Client" id="addclient" type="button" class="btn btn-outline-success" [routerLink]="['/clientform']">
       <img id="icon" src="../assets/icons/addclient.svg" class="img-fluid" alt="...">
@@ -21,7 +29,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let client of clients">
+        <tr *ngFor="let client of filteredClients">
             <td>{{ client.id }}</td>
             <td>{{ client.name }}</td>
             <td>{{ client.lastName }}</td>
