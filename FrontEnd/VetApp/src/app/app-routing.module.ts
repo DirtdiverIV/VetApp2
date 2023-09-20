@@ -9,6 +9,7 @@ import { AppointmentsComponent } from './components/appointments/appointments.co
 import { ClientformComponent } from './components/clientform/clientform.component';
 import { PetformComponent } from './components/petform/petform.component';
 import { AppointmentformComponent } from './components/appoinmentform/appoinmentform.component';
+import { MedhistoryformComponent } from './components/medhistoryform/medhistoryform.component';
 
 const routes: Routes = [
   { path: 'clientdetail/:id', component: ClientdetailComponent},
@@ -19,7 +20,9 @@ const routes: Routes = [
     {path: 'appointments', component: AppointmentsComponent},
     { path: 'clientform', component: ClientformComponent },
     { path: 'petform', component: PetformComponent },
-    { path: 'appform', component: AppointmentformComponent }
+    { path: 'appform', component: AppointmentformComponent },
+    { path: 'medhistory', component: MedhistoryformComponent }
+
 
 
 

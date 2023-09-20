@@ -1,6 +1,7 @@
 package com.dirtdiveriv.VetApp.controllers;
 
 import com.dirtdiveriv.VetApp.models.Appointment;
+import com.dirtdiveriv.VetApp.models.MedicalHistory;
 import com.dirtdiveriv.VetApp.repositories.PetsRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityNotFoundException;
@@ -64,6 +65,18 @@ public class PetsController {
         entityManager.persist(appointment);
 
         return appointment;
+    }
+
+    @PostMapping("/{petId}/medicalhistories")
+    @Transactional
+    public MedicalHistory createMedicalHistoryForPet(@PathVariable Long petId, @RequestBody MedicalHistory medicalHistory) {
+        Pets pet = petsRepository.findById(petId)
+                .orElseThrow(() -> new EntityNotFoundException("Pet with ID " + petId + " not found."));
+
+        medicalHistory.setPet(pet);
+        entityManager.persist(medicalHistory);
+
+        return medicalHistory;
     }
 
     @PutMapping("/{id}")

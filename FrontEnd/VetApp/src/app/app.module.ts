@@ -17,6 +17,7 @@ import { ClientformComponent } from './components/clientform/clientform.componen
 import { FormsModule } from '@angular/forms';
 import { PetformComponent } from './components/petform/petform.component';
 import { AppointmentformComponent } from './components/appoinmentform/appoinmentform.component';
+import { MedhistoryformComponent } from './components/medhistoryform/medhistoryform.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AppointmentformComponent } from './components/appoinmentform/appoinment
     AppointmentsComponent,
     ClientformComponent,
     PetformComponent,
-    AppointmentformComponent
+    AppointmentformComponent,
+    MedhistoryformComponent
   ],
   imports: [
     BrowserModule,

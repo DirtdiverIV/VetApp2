@@ -44,4 +44,8 @@ export class PetsService {
     const url = `${this.baseUrl}/${petId}/appointments`;
     return this.http.post<any>(url, appointment);
   }
+
+  createMedicalHistoryForPet(petId: number, medicalHistory: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/${petId}/medicalhistories`, medicalHistory);
+  }
 }
